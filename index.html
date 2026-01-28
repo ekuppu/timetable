@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuppu – Timetable</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        background: white;
+    }
+
+    th, td {
+        border: 1px solid #333;
+        padding: 6px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    th {
+        background-color: #ffe599;
+    }
+
+    .day {
+        background-color: #d9e1f2;
+        font-weight: bold;
+    }
+
+    .yellow { background-color: #ffd966; }
+    .orange { background-color: #f4b183; }
+    .green  { background-color: #92d050; }
+    .blue   { background-color: #9dc3e6; }
+
+    h2 {
+        text-align: center;
+    }
+.table-container {
+    width: 100%;
+    overflow-x: auto;   /* enables horizontal scroll on mobile */
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+        white-space: nowrap; /* prevents text wrapping inside cells */
+    }
+
+    .day {
+        position: sticky;
+        left: 0;
+        background: #d9e1f2;
+        z-index: 2;
+    }
+
+    th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 3;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h2>Kuppu – Weekly Timetable</h2>
+<div class="table-container">
+<table>
+     <style>table-layout: fixed;</style>
+<colgroup>
+    <col style="width:12%">
+    <col span="9" style="width:9.78%">
+</colgroup>
+
+    <tr>
+        <th>Kuppu</th>
+        <th>1</th><th>2</th><th>3</th><th>4</th>
+        <th>5</th><th>6</th><th>7</th><th>8</th><th>PT</th>
+    </tr>
+
+    <tr>
+        <td class="day">Monday</td>
+        <td></td><td></td>
+        <td colspan="2" class="blue">EH3201 - T</td>
+        <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+
+    <tr>
+        <td class="day">Tuesday</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+
+    <tr>
+        <td class="day">Wednesday</td>
+        <td></td><td></td>
+        <td class="blue">EH3201 - T</td>
+        <td></td><td></td><td></td>
+        <td colspan="2" class="orange">ME23S06 - B2</td>
+        
+        <td class="yellow">TH3002</td>
+    </tr>
+
+    <tr>
+        <td class="day">Thursday</td>
+        <td></td><td></td><td></td><td></td>
+        <td class="yellow">ME23907</td>
+        <td class="green">ME23S07 - B1</td>
+        <td colspan="2" class="green">ME23S07 - B2</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td class="day">Friday</td>
+        <td colspan="2" class="orange">ME23S06 - B1</td>
+        <td colspan="2" class="yellow">ME23907</td>
+        <td colspan="2" class="blue">EH3201 - LAB</td>
+        <td></td><td></td><td></td>
+    </tr>
+</table>
+</div>
+<br>
+
+<h2>Course Details</h2>
+<div class="table-container">
+<table>
+    <tr>
+        <th>Type</th><th>Code</th><th>Year</th><th>Batch</th><th>Course Title</th>
+    </tr>
+    <tr class="orange">
+        <td>ANSYS</td><td>ME23S06</td><td>IV-Mech</td><td>AB-W1</td>
+        <td>Fundamentals of Practical Analysis Skills Using ANSYS</td>
+    </tr>
+    <tr class="green">
+        <td>MATLAB</td><td>ME23S07</td><td>IV-Mech</td><td>CD-W2</td>
+        <td>Physical Modelling and Analysis of Mech Systems</td>
+    </tr>
+    <tr class="yellow">
+        <td>OE</td><td>ME23907</td><td>VI-OE</td><td>W14</td>
+        <td>Energy Auditing and Conservation</td>
+    </tr>
+    <tr class="blue">
+        <td>CFD</td><td>EH3201</td><td>II-ME/EHT</td><td>ICE-SH</td>
+        <td>Computational Fluid Dynamics</td>
+    </tr>
+    <tr class="yellow">
+        <td>PT</td><td>TH3002</td><td>IV-TE/PT</td><td>W4</td>
+        <td>Engine Emission and Control Technologies</td>
+    </tr>
+</table>
+</div>
+<br>
+
+<h2>Assist Contacts</h2>
+<div class="table-container">
+<table>
+    <tr><th>Area</th><th>Name</th><th>Dept</th><th>Contact</th></tr>
+    <tr class="green"><td>MATLAB</td><td>M Balasubramaniam</td><td>EHT</td><td>9345595367</td></tr>
+    <tr class="green"><td></td><td>R Yogamithra</td><td>ED</td><td>8778590989</td></tr>
+    <tr class="orange"><td>ANSYS</td><td>Ajay Sundhar</td><td>RAC</td><td>9789975339</td></tr>
+    <tr class="orange"><td></td><td>Aravind Krishna</td><td>ED</td><td>6380220725</td></tr>
+</table>
+</div>
+</body>
+</html>
